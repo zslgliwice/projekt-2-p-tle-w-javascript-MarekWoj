@@ -20,12 +20,29 @@
 	<div id="wynik"></div>
 	
 	<script>
-	
-		function sledztwo()
-		{
-			
-		}
+	 function sledztwo() {
+        
+            let liczba = document.getElementById("liczba").value;
 
+            let wynik = document.getElementById("wynik");
+
+            wynik.innerHTML = ''; 
+
+    
+            for (let i = 0; i < 10; i++) {
+                let roznica = liczba - i; 
+                 
+                if (roznica > 0) {
+                    wynik.innerHTML += i + " jest niewinne " + roznica + " jest o  mniejsze niz morderca<br>";  
+                } else if (roznica === 0) {
+                    wynik.innerHTML += i + " jest morderca! Aresztuj je watson <br>";
+                }else if(roznica < 0)
+                {
+                    wynik.innerHTML += i + " jest niewinne  jest o "+ Math.abs(roznica) + " wieksze niz morderca <br>";  
+                }
+                
+            }
+        }
 	</script>
 
 </body>
