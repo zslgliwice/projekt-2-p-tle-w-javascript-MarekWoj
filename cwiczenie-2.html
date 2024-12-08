@@ -20,12 +20,34 @@
 	<div id="wynik"></div>
 	
 	<script>
-	
-		function generuj()
-		{
-			
-		}
+	  function generuj() {
+            
+            let x = document.getElementById("x").value; 
+            let wynik = document.getElementById("wynik")
+     
+            let parzyste = [];
+            let nieparzyste = [];
+        
+             if (x < 0) {
 
+                wynik.innerHTML = "Podana wartość jest ujemna";
+                
+            } else if (x == 0) {
+
+                wynik.innerHTML = "Podane x jest równe zero";
+
+            } else {
+            
+            for (let i = 1; i <= x; i++) {
+            if (i % 2 == 0) {
+                parzyste.push(i); 
+             } else {
+                 nieparzyste.push(i);  
+                    }
+                }
+
+             wynik.innerHTML = `Parzyste: ${parzyste.join(" ")}  Nieparzyste: ${nieparzyste.join(" ")}`
+        }}
 	</script>
 
 </body>
