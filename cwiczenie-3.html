@@ -28,10 +28,30 @@
 	
 	<script>
 	
-		function przemowa()
-		{
-			
-		}
+	function przemowa() {
+            let postac = document.getElementById("postac").value; 
+            let ile = document.getElementById("ile").value; 
+            let wynik = document.getElementById("wynik");  
+            
+            wynik.innerHTML = ''; 
+
+            let tekst = "";
+            if (postac === "c") {
+                tekst = "Mocium panie";
+            } else if (postac === "r") {
+                tekst = "Niech się dzieje wola nieba";
+            }
+
+      
+            let wynikTekst = "";
+            for (let i = 0; i < ile; i++) {
+                wynikTekst += tekst + " <br>";
+            }
+
+     
+            wynik.innerHTML = wynikTekst;
+        }
+	
 
 	</script>
 
