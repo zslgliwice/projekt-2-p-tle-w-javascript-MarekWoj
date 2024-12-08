@@ -20,10 +20,22 @@
 	<div id="wynik"></div>
 	
 	<script>
-	
-		function generuj()
-		{
+	let x = parseInt(document.getElementById("x").value);            
+	let wynik = document.getElementById("wynik");
+	let suma = 0;
+
 			
+            wynik.innerHTML = ''; 
+
+	let liczby = [];
+	for (let i = 1; i <= x; i++) {
+
+         suma += i;
+        liczby.push(i);
+        let obliczenia = liczby.join(" + ");
+                
+	wynik.innerHTML += `${obliczenia} = ${suma}<br>`;
+			}
 		}
 
 	</script>
